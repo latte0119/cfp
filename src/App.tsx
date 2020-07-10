@@ -1,8 +1,10 @@
 import React from 'react';
-
+import {ContestList} from './component/ContestList';
 const App:React.FC=()=>{
   return (
-    <h1>latte</h1>
+    <div>
+    <ContestList/>
+    </div>
   );
 }
 
