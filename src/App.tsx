@@ -1,9 +1,9 @@
 import React from 'react';
-import {ContestList} from './component/ContestList';
+import {ContestListPage} from './page/ContestListPage';
 const App:React.FC=()=>{
   return (
     <div>
-    <ContestList/>
+    <ContestListPage/>
     </div>
   );
 }
