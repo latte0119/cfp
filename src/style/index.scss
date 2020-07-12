@@ -1,1 +1,8 @@
-@import "~bootstrap/scss/bootstrap.scss"
+$Background:#000000;
+$OnBackground:#ffffff;
+
+body{
+    background-color:$Background;
+    color:$OnBackground;
+    margin:0px;
+}
