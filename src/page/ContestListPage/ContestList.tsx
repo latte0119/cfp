@@ -33,6 +33,7 @@ const ContestList:React.FC<Props>=(props)=>{
             <h1>{title}</h1>
             {contests.toArray().map((contest)=>(
                 <ContestView
+                    key={contest.id}
                     contest={contest}
                     problems={(():List<Problem>=>{
                         const ret=contestIdToProblems.get(contest.id);

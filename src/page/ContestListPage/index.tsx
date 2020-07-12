@@ -54,7 +54,7 @@ const  InnerContestListPage:React.FC<InnerProps>=(props)=>{
     return (
         <div>
         <ContestCategorySelectionBar {...{selectedCategory,setSelectedCategory}}/>
-        <ContestList 
+        <ContestList
             contestCategory={selectedCategory}
             contests={filteredContests}
             contestIdToProblems={contestIdToProblems}

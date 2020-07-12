@@ -27,11 +27,11 @@ const ContestView:React.FC<Props>=(props)=>{
     return (
         <div>
             <h1>{contest.name}</h1>
-            <Table key={contest.id}>
+            <Table>
                 <thead>
                     {
                         problems.toArray().map(problem=>(
-                            <th>
+                            <th key={problem.index}>
                                 {problem.index}
                             </th>
                         ))
@@ -41,7 +41,7 @@ const ContestView:React.FC<Props>=(props)=>{
                     <tr>
                         {
                             problems.toArray().map(problem=>(
-                                <td>
+                                <td key={problem.index}>
                                     {problem.name}
                                 </td>
                             ))
