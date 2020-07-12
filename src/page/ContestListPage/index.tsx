@@ -31,14 +31,14 @@ const  InnerContestListPage:React.FC<InnerProps>=(props)=>{
 
 
     const contests=contestsFetch.fulfilled
-        ?contestsFetch.value
+        ?contestsFetch.value.filter(contest=>(contest.phase==="FINISHED"))
         :List([])
 
     const problems=problemsFetch.fulfilled
         ?problemsFetch.value
         :List([])
 
-    
+
     let contestIdToProblems=Map<number,List<Problem>>()
     problems.forEach(problem=>{
         if(contestIdToProblems.has(problem.contestId)){
@@ -48,7 +48,6 @@ const  InnerContestListPage:React.FC<InnerProps>=(props)=>{
             contestIdToProblems=contestIdToProblems.set(problem.contestId,List<Problem>([problem]));
         }
     })
-    
 
     const filteredContests=contests.filter(contest=>(classifyContest(contest)===selectedCategory));
 

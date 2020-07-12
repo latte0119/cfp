@@ -3,4 +3,5 @@ export default interface Contest{
     readonly name:string,
     readonly durationSeconds:number,
     readonly startTimeSeconds:number|null,
+    readonly phase:string
 }
