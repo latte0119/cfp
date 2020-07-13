@@ -3,7 +3,7 @@ import{
   Container
 }from "reactstrap";
 import NavigationBar from "./component/NavigationBar";
-import {ContestListPage} from './page/ContestListPage';
+import {ContestTablePage} from './page/ContestTablePage';
 
 const App:React.FC=()=>{
   return (
@@ -16,7 +16,7 @@ const App:React.FC=()=>{
         className="my-5"
         style={{width:"100%",maxWidth:"90%"}}
       >
-        <ContestListPage/>
+        <ContestTablePage/>
       </Container>
 
     </div>
