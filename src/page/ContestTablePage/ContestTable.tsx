@@ -1,8 +1,6 @@
 import React from 'react';
 import {Map,List} from 'immutable';
 
-import {Row} from "reactstrap";
-
 import Contest from '../../interface/Contest';
 import Problem from '../../interface/Problem';
 
@@ -16,7 +14,7 @@ interface Props{
     contestIdToProblems:Map<number,List<Problem>>
 }
 
-const ContestList:React.FC<Props>=(props)=>{
+const ContestTable:React.FC<Props>=(props)=>{
     const {
         contestCategory,
         contests,
@@ -46,4 +44,4 @@ const ContestList:React.FC<Props>=(props)=>{
     )
 }
 
-export default ContestList;
+export default ContestTable;

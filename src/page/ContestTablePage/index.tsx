@@ -9,7 +9,7 @@ import Contest from '../../interface/Contest';
 import Problem from '../../interface/Problem';
 import {ContestCategory,ContestCategories, classifyContest} from '../../utility/ContestClassifier';
 
-import ContestList from './ContestList';
+import ContestTable from './ContestTable';
 import ContestCategorySelectionBar from './ContestCategorySelectionBar';
 
 
@@ -23,7 +23,7 @@ interface InnerProps extends OuterProps{
     problemsFetch:PromiseState<List<Problem>>
 }
 
-const  InnerContestListPage:React.FC<InnerProps>=(props)=>{
+const  InnerContestTablePage:React.FC<InnerProps>=(props)=>{
     const {
         contestsFetch,
         problemsFetch
@@ -56,7 +56,7 @@ const  InnerContestListPage:React.FC<InnerProps>=(props)=>{
     return (
         <div>
         <ContestCategorySelectionBar {...{selectedCategory,setSelectedCategory}}/>
-        <ContestList
+        <ContestTable
             contestCategory={selectedCategory}
             contests={filteredContests}
             contestIdToProblems={contestIdToProblems}
@@ -65,7 +65,7 @@ const  InnerContestListPage:React.FC<InnerProps>=(props)=>{
     )
 }  
 
-export const ContestListPage=connect<OuterProps,InnerProps>((props)=>({
+export const ContestTablePage=connect<OuterProps,InnerProps>((props)=>({
     contestsFetch:{
         comparison:null,
         value:APIClient.fetchContests()
@@ -74,4 +74,4 @@ export const ContestListPage=connect<OuterProps,InnerProps>((props)=>({
         comparison:null,
         value:APIClient.fetchProblems()
     }
-}))(InnerContestListPage);
+}))(InnerContestTablePage);
