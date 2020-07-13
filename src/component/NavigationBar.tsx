@@ -6,8 +6,6 @@ import {
     DropdownMenu,
     DropdownItem,
     Nav,
-    NavLink,
-    NavItem,
     Navbar,
     NavbarBrand,
     NavbarToggler,
@@ -17,16 +15,13 @@ import {
 const NavigationBar:React.FC=()=>{
     const [isOpen,setIsOpen]=useState(false);
     return(
-        <Navbar color="dark" dark>
+        <Navbar color="dark" dark expand="sm">
             <NavbarBrand>
                 Codeforces Problems
             </NavbarBrand>
             <NavbarToggler onClick={():void=>{setIsOpen(!isOpen)}}/>
             <Collapse isOpen={isOpen} navbar>
                 <Nav navbar>
-                    <NavItem>
-                        
-                    </NavItem>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>
                             more

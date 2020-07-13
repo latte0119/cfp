@@ -1,6 +1,8 @@
 import React from 'react';
 import {Map,List} from 'immutable';
 
+import {Row} from "reactstrap";
+
 import Contest from '../../interface/Contest';
 import Problem from '../../interface/Problem';
 
@@ -26,20 +28,18 @@ const ContestList:React.FC<Props>=(props)=>{
         if(contestCategory==="CGR")return "Codeforces Global Round";
         if(contestCategory==="ECR")return "Educational Codeforces Round";
         return contestCategory;
-    });
+    })();
 
     return (
         <div>
-            <h1>{title}</h1>
+            <div className="my-4">
+                <h1>{title}</h1>
+            </div>
             {contests.toArray().map((contest)=>(
                 <ContestView
                     key={contest.id}
                     contest={contest}
-                    problems={(():List<Problem>=>{
-                        const ret=contestIdToProblems.get(contest.id);
-                        if(ret!==undefined)return ret;
-                        return List<Problem>([]);
-                    })()}
+                    problems={contestIdToProblems.get(contest.id,List<Problem>())}
                 />
             ))}
         </div>

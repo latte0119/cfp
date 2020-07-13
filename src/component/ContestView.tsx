@@ -19,15 +19,15 @@ interface Props{
 const ContestView:React.FC<Props>=(props)=>{
     let{
         contest,
-        problems
+         problems
     }=props;
 
     problems=problems.sort((a:Problem,b:Problem)=>(a.index<b.index?-1:1))
 
     return (
         <div>
-            <h1>{contest.name}</h1>
-            <Table>
+            {contest.name}
+            <Table bordered dark>
                 <thead>
                     {
                         problems.toArray().map(problem=>(

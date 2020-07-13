@@ -8,12 +8,17 @@ import {ContestListPage} from './page/ContestListPage';
 const App:React.FC=()=>{
   return (
     <div>
-      <NavigationBar/>
+      <div className="sticky-top">
+        <NavigationBar/>
+      </div>
+  
       <Container
-         style={{width:"100%",maxWidth:"90%"}}
+        className="my-5"
+        style={{width:"100%",maxWidth:"95%"}}
       >
         <ContestListPage/>
       </Container>
+
     </div>
   );
 }

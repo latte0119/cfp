@@ -1,7 +1,9 @@
 import React ,{useState} from 'react';
 import {connect,PromiseState} from 'react-refetch';
 import {List,Map} from 'immutable';
-
+import {
+    Container
+}from "reactstrap";
 
 import Contest from '../../interface/Contest';
 import Problem from '../../interface/Problem';
@@ -27,7 +29,7 @@ const  InnerContestListPage:React.FC<InnerProps>=(props)=>{
         problemsFetch
     }=props;
 
-    const [selectedCategory,setSelectedCategory]=useState<ContestCategory>(ContestCategories[0]);
+    const [selectedCategory,setSelectedCategory]=useState<ContestCategory>(ContestCategories[1]);
 
 
     const contests=contestsFetch.fulfilled
