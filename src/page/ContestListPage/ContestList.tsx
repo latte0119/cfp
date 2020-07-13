@@ -8,7 +8,7 @@ import Problem from '../../interface/Problem';
 
 import {ContestCategory} from '../../utility/ContestClassifier';
 
-import ContestView from "../../component/ContestView";
+import ContestView from "./ContestView";
 
 interface Props{
     contestCategory:ContestCategory,

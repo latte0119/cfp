@@ -5,8 +5,8 @@ import {
     Table,
 } from "reactstrap";
 
-import Contest from "../interface/Contest";
-import Problem from "../interface/Problem";
+import Contest from "../../interface/Contest";
+import Problem from "../../interface/Problem";
 
 
 
@@ -27,22 +27,13 @@ const ContestView:React.FC<Props>=(props)=>{
     return (
         <div>
             {contest.name}
-            <Table bordered dark>
-                <thead>
-                    {
-                        problems.toArray().map(problem=>(
-                            <th key={problem.index}>
-                                {problem.index}
-                            </th>
-                        ))
-                    }
-                </thead>
+            <Table bordered dark responsive>
                 <tbody>
                     <tr>
                         {
                             problems.toArray().map(problem=>(
                                 <td key={problem.index}>
-                                    {problem.name}
+                                    {problem.index+". "+problem.name}
                                 </td>
                             ))
                         }
