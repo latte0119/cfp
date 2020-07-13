@@ -14,7 +14,7 @@ const App:React.FC=()=>{
   
       <Container
         className="my-5"
-        style={{width:"100%",maxWidth:"95%"}}
+        style={{width:"100%",maxWidth:"90%"}}
       >
         <ContestListPage/>
       </Container>
