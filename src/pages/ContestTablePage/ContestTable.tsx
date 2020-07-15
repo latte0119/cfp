@@ -1,10 +1,10 @@
 import React from 'react';
 import {Map,List} from 'immutable';
 
-import Contest from '../../interface/Contest';
-import Problem from '../../interface/Problem';
+import Contest from '../../interfaces/Contest';
+import Problem from '../../interfaces/Problem';
 
-import {ContestCategory} from '../../utility/ContestClassifier';
+import {ContestCategory} from '../../utilities/ContestClassifier';
 
 import ContestView from "./ContestView";
 

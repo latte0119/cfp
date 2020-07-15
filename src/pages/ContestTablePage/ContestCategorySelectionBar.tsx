@@ -1,6 +1,6 @@
 import React from "react";
 import {Button,ButtonGroup} from "reactstrap";
-import { ContestCategory,ContestCategories } from "../../utility/ContestClassifier";
+import { ContestCategory,ContestCategories } from "../../utilities/ContestClassifier";
 
 interface Props{
     selectedCategory:ContestCategory,

@@ -2,15 +2,15 @@ import React ,{useState} from 'react';
 import {connect,PromiseState} from 'react-refetch';
 import {List,Map} from 'immutable';
 
-import Contest from '../../interface/Contest';
-import Problem from '../../interface/Problem';
-import {ContestCategory,ContestCategories, classifyContest} from '../../utility/ContestClassifier';
+import Contest from '../../interfaces/Contest';
+import Problem from '../../interfaces/Problem';
+import {ContestCategory,ContestCategories, classifyContest} from '../../utilities/ContestClassifier';
 
 import ContestTable from './ContestTable';
 import ContestCategorySelectionBar from './ContestCategorySelectionBar';
 
 
-import * as APIClient from '../../utility/APIClient';
+import * as APIClient from '../../utilities/APIClient';
 
 interface OuterProps{
 }

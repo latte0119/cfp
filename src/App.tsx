@@ -2,8 +2,8 @@ import React from 'react';
 import{
   Container
 }from "reactstrap";
-import NavigationBar from "./component/NavigationBar";
-import {ContestTablePage} from './page/ContestTablePage';
+import NavigationBar from "./components/NavigationBar";
+import {ContestTablePage} from './pages/ContestTablePage';
 
 const App:React.FC=()=>{
   return (

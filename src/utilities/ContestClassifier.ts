@@ -1,4 +1,4 @@
-import Contest from "../interface/Contest";
+import Contest from "../interfaces/Contest";
 
 export const ContestCategories=[
     "CR",

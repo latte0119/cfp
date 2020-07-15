@@ -5,8 +5,8 @@ import {
     Table,
 } from "reactstrap";
 
-import Contest from "../../interface/Contest";
-import Problem from "../../interface/Problem";
+import Contest from "../../interfaces/Contest";
+import Problem from "../../interfaces/Problem";
 
 
 
