@@ -1,9 +1,6 @@
 import React ,{useState} from 'react';
 import {connect,PromiseState} from 'react-refetch';
 import {List,Map} from 'immutable';
-import {
-    Container
-}from "reactstrap";
 
 import Contest from '../../interface/Contest';
 import Problem from '../../interface/Problem';
